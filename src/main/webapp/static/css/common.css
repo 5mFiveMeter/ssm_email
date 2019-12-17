@@ -1,0 +1,124 @@
+/*基础样式修改区*/
+html,body{
+	height:100%;
+	background:#f8f8f8;
+}
+div{
+	background:#ffffff;
+}
+table{
+	width:100%;
+	height: 100%;
+}
+table td{
+	border:1px solid #e2e2e2;
+}
+
+
+/*按钮样式*/
+.fm_btn{
+	display: inline-block;
+    height: 30px;
+    padding: 3px 15px;
+    background-color: #057ee0;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+	outline:none;
+    border-radius: 2px;
+    cursor: pointer;
+    overflow:hidden;
+}
+.fm_btn_raw{
+	display: inline-block;
+    height: 30px;
+    padding: 3px 15px;
+    background-color: #fff;
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e2e2e2;
+	outline:none;
+    border-radius: 2px;
+    cursor: pointer;
+    overflow:hidden;
+}
+/*背景主题色*/
+.bg_theme_blue{
+	background:#057ee0;
+	color: #fff;
+	text-align: center;
+}
+.bg_theme_green{
+	background:#FF5700;
+	color: #fff;
+	text-align: center;
+}
+.bg_table_label{
+	width:100px;
+	height:40px;
+	background:#E2F3FC;
+	text-align:center;
+}
+/*鼠标悬置*/
+.bg_theme_blue_hover:hover{
+	background:#057ee0;
+	color: #fff;
+	text-align: center;
+	cursor:pointer;
+}
+/*内边距容器*/
+.box_padding_xxl{
+	padding:5px;
+}
+.box_padding_xl{
+	padding:10px;
+}
+.box_padding_l{
+	padding:15px;
+}
+/*边框色*/
+.fm_bdb{
+	border-bottom:1px solid #e2e2e2;
+}
+.fm_bdt{
+	border-top:1px solid #e2e2e2;
+}
+.fm_bdc{
+	border:1px solid #e2e2e2;
+}
+.fm_bdb_blue{
+	cursor:pointer;
+	border-bottom:1px solid #057ee0;
+}
+/*必填提示*/
+.fm_require::before{
+	content:"*";
+	color:#FF5700;
+}
+/*弹出的iframe*/
+.iframe_container{
+	height:100%;
+	overflow-y:auto; 
+	background:#fff;
+}
+/*弹窗底部按钮*/
+.panel_footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	text-align: right;
+	padding: 5px 0;
+	height: 30px;
+}
+/*文字对齐*/
+.fm_text_right{
+	text-align:right;
+}
+.fm_text_center{
+	text-align:center;
+}

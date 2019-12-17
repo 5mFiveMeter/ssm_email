@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.fivemeter.email.dao.UserMapper">
+	
+	<select id="select" resultType="cn.fivemeter.email.bean.User">
+		SELECT * FROM users
+		<where>
+			<if test="token!=null">
+				and token=#{token}
+			</if>
+			<if test="userId != null">
+				and userId=#{userId}
+			</if>
+			<if test="userName != null">
+				and userName=#{userName}
+			</if>
+			<if test="password != null">
+				and password=#{password}
+			</if>
+		</where>
+	</select>
+	
+	<update id="update" parameterType="Map">
+		UPDATE users 
+		<set>
+			<if test="newUserId != null">
+				userId=#{newUserId},
+			</if>
+			<if test="newUserName != null">
+				userName=#{newUserName},
+			</if>
+			<if test="password != null">
+				password=#{password},
+			</if>
+			<if test="departId != null">
+				departId=#{departId},
+			</if>
+			<if test="departName != null">
+				departName=#{departName},
+			</if>
+			<if test="photo != null">
+				photo=#{photo},
+			</if>
+			<if test="sex != null">
+				sex=#{sex},
+			</if>
+			<if test="birth != null">
+				birth=#{birth},
+			</if>
+			<if test="mobile != null">
+				mobile=#{mobile},
+			</if>
+			<if test="lastLoginTime != null">
+				lastLoginTime=#{lastLoginTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="token != null">
+				token=#{token},
+			</if>
+		</set>
+		<where>
+			<if test="userId != null">
+				and userId=#{userId},
+			</if>
+			<if test="userName != null">
+				and userName=#{userName}
+			</if>
+		</where>
+	</update>
+	
+	<insert id="insert" parameterType="cn.fivemeter.email.bean.User">
+		INSERT INTO users (userId,userName,password,photo,sex,birth,mobile,lastLoginTime,remark,token,registerTime)
+		VALUES
+		(#{userId},#{userName},#{password},#{photo},#{sex},#{birth},#{mobile},#{lastLoginTime},#{remark},#{token},#{registerTime})
+	</insert>
+	
+</mapper>
